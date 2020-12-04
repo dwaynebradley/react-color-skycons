@@ -1,15 +1,15 @@
 {
-  "name": "react-skycons",
-  "version": "0.8.8",
-  "description": "skycons",
+  "name": "react-color-skycons",
+  "version": "0.1.0",
+  "description": "skycons-color",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
-  "author": "Fong Kuanghui <waneblade@gmail.com>",
+  "author": "Dwayne Bradley <dwayne.bradley@gmail.com>",
   "bugs": {
-    "url": "https://github.com/roadmanfong/react-skycons/issues"
+    "url": "https://github.com/dwaynebradley/react-color-skycons/issues"
   },
   "keywords": [
     "react",
@@ -20,11 +20,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/roadmanfong/react-skycons.git"
+    "url": "https://github.com/dwaynebradley/react-color-skycons.git"
   },
   "dependencies": {
-    "globalthis": "^1.0.1",
-    "skycons": "^1.0.0"
+    "skycons-color": "^1.0.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0"

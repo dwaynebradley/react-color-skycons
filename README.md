@@ -1,34 +1,29 @@
-# [react-skycons](http://roadmanfong.github.io/react-skycons/)
+# react-color-skycons
 
-skycons as React components
+color-skycons as React components
 
-[![Build Status](https://travis-ci.org/roadmanfong/react-skycons.svg?branch=master)](https://travis-ci.org/roadmanfong/react-skycons) [![npm version](https://img.shields.io/npm/v/react-skycons.svg?style=flat-square)](https://www.npmjs.com/package/react-skycons) [![npm downloads](https://img.shields.io/npm/dm/react-skycons.svg?style=flat-square)](https://www.npmjs.com/package/react-skycons)
-
-See [Demo](https://codesandbox.io/s/react-skycons-demo-r6309) here
+This is a fork of the awesome [react-skycons](https://github.com/roadmanfong/react-skycons)
+from Fong Kuanghuei (waneblade@gmail.com) implementing the [color-skycons](https://github.com/maxdow/skycons)
+from Maxime Warnier.
 
 ## Installation
 
-Install via [npm](https://www.npmjs.com/package/react-skycons)
+Install via [npm](https://www.npmjs.com/package/react-color-skycons)
 
 ```cli
-$ yarn add react-skycons
+$ yarn add react-color-skycons
 ```
 
 ## Quick Example
 
 ```js
 import React from 'react'
-import Skycons, { SkyconsType } from 'react-skycons'
+import ColorSkycons, { ColorSkyconsType } from 'react-color-skycons'
 
 function Demo() {
-  const svgProps = {
-    style: { backgroundColor: 'blue' },
-  }
-
   return (
-    <Skycons
-      color="white"
-      type={SkyconsType.CLEAR_DAY}
+    <ColorSkycons
+      type={ColorSkyconsType.CLEAR_DAY}
       animate={true}
       size={24}
       resizeClear={true}
@@ -46,7 +41,7 @@ yarn run build
 
 ## Author
 
-Fong Kuanghuei(waneblade@gmail.com)
+Dwayne Bradley (dwayne.bradley@gmail.com)
 
 ## License
 

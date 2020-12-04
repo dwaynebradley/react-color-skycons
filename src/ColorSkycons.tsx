@@ -1,34 +1,47 @@
 import React, { useEffect, useRef } from 'react'
-const globalThis = require('globalthis')()
-const Skycons = require('skycons')(globalThis)
+const Skycons = require('skycons-color')
 
-export enum SkyconsType {
+export enum ColorSkyconsType {
   CLEAR_DAY = 'CLEAR_DAY',
   CLEAR_NIGHT = 'CLEAR_NIGHT',
   PARTLY_CLOUDY_DAY = 'PARTLY_CLOUDY_DAY',
   PARTLY_CLOUDY_NIGHT = 'PARTLY_CLOUDY_NIGHT',
   CLOUDY = 'CLOUDY',
   RAIN = 'RAIN',
+  SHOWERS_DAY = 'SHOWERS_DAY',
+  SHOWERS_NIGHT = 'SHOWERS_NIGHT',
   SLEET = 'SLEET',
+  RAIN_SNOW = 'RAIN_SNOW',
+  RAIN_SNOW_SHOWERS_DAY = 'RAIN_SNOW_SHOWERS_DAY',
+  RAIN_SNOW_SHOWERS_NIGHT = 'RAIN_SNOW_SHOWERS_NIGHT',
   SNOW = 'SNOW',
+  SNOW_SHOWERS_DAY = 'SNOW_SHOWERS_DAY',
+  SNOW_SHOWERS_NIGHT = 'SNOW_SHOWERS_NIGHT',
   WIND = 'WIND',
   FOG = 'FOG',
+  THUNDER = 'THUNDER',
+  THUNDER_RAIN = 'THUNDER_RAIN',
+  THUNDER_SHOWERS_DAY = 'THUNDER_SHOWERS_DAY',
+  THUNDER_SHOWERS_NIGHT = 'THUNDER_SHOWERS_NIGHT',
+  HAIL = 'HAIL',
 }
 
-export interface SkyconsProps
+export interface ColorSkyconsProps
   extends React.DetailedHTMLProps<
     React.CanvasHTMLAttributes<HTMLCanvasElement>,
     HTMLCanvasElement
   > {
+  monochrome?: boolean
   color?: string
   animate?: boolean
   resizeClear?: boolean
-  type: SkyconsType
+  type: ColorSkyconsType
   size?: number
 }
 
-export default function SkyconsComponent(props: SkyconsProps) {
+export default function ColorSkyconsComponent(props: ColorSkyconsProps) {
   const {
+    monochrome = false,
     color,
     animate = true,
     resizeClear,
@@ -41,6 +54,7 @@ export default function SkyconsComponent(props: SkyconsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   useEffect(() => {
     const skycons = new Skycons({
+      monochrome,
       color,
       resizeClear,
     })

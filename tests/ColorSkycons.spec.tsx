@@ -1,28 +1,33 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import Skycons, { SkyconsType } from '../src/Skycons'
+import ColorSkycons, { ColorSkyconsType } from '../src/ColorSkycons'
 
 it('should render a component', async () => {
   render(
-    <Skycons type={SkyconsType.CLEAR_DAY} color="red" resizeClear={true} />
+    <ColorSkycons
+      type={ColorSkyconsType.CLEAR_DAY}
+      monochrome={true}
+      color="red"
+      resizeClear={true}
+    />
   )
   expect(screen.queryByRole('img')).toBeInTheDocument()
 })
 
 it('should be able to re-render a component', async () => {
   const { rerender } = render(
-    <Skycons
-      type={SkyconsType.CLEAR_DAY}
-      color="red"
+    <ColorSkycons
+      type={ColorSkyconsType.CLEAR_DAY}
+      monochrome={false}
       animate={true}
       size={24}
       resizeClear={true}
     />
   )
   rerender(
-    <Skycons
-      type={SkyconsType.CLEAR_NIGHT}
+    <ColorSkycons
+      type={ColorSkyconsType.CLEAR_NIGHT}
       color="blue"
       animate={false}
       size={48}

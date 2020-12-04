@@ -1,9 +1,8 @@
-// cSpell Settings
 {
   "version": "0.1",
   "language": "en",
   "words": [
-    "skycons",
+    "skycons-color",
     "skycon",
     "globalthis"
   ]

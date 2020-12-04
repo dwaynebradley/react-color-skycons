@@ -1,4 +1,4 @@
-import Skycons, { SkyconsType } from './Skycons'
-export { Skycons, SkyconsType }
-export type { SkyconsProps } from './Skycons'
-export default Skycons
+import ColorSkycons, { ColorSkyconsType } from './ColorSkycons'
+export { ColorSkycons, ColorSkyconsType }
+export type { ColorSkyconsProps } from './ColorSkycons'
+export default ColorSkycons
