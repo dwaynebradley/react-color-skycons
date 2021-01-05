@@ -42,6 +42,7 @@ yarn run build
 ## Author
 
 Original: Fong Kuanghuei(waneblade@gmail.com)
+
 Color Updates: Dwayne Bradley (dwayne.bradley@gmail.com)
 
 ## License
